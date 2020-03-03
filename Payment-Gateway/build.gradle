@@ -1,0 +1,44 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
+    defaultConfig {
+        applicationId "com.yyjia.sdk.demo.haituidata"
+        minSdkVersion 17
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    defaultConfig {
+        ndk {
+            abiFilters "armeabi-v7a"
+        }
+    }
+}
+
+dependencies {
+    implementation project(path: ':sdk')
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+//    implementation(name: 'MYKEY', ext: 'aar')
+    implementation "com.alibaba:fastjson:1.1.70.android"
+    implementation 'org.jetbrains:annotations-java5:15.0'
+}
