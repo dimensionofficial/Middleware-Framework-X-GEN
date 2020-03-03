@@ -1,4 +1,6 @@
-# Middleware-Framework-X-GEN
+# Middleware-Framework-X-GEN  
+![image](Pic/middleware-framework.JPG)  
+
 ## Middleware framework construction  
 The first phase of middleware framework X-Gen is preliminarily completed, in which each module can be flexibly plugged and adapted to different application requirements. The first phase aims to achieve account management, token payment, etc. Meanwhile, the middleware is connected to the chaingame platform to support the operation of the chaingame platform.  
 
