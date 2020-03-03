@@ -1,8 +1,5 @@
-
-mykey支付：
-
+mykey转账：
 唤起MYKEY进行转账。
-
 TransferRequest transferRequest =new TransferRequest()
         // EOS用 ChainCons.EOS，ETH用 ChainCons.ETH
         .setChain(ChainCons.EOS)
@@ -45,7 +42,6 @@ TransferRequest transferRequest =new TransferRequest()
 
 
 使用mykey进行合约调用：
-
 ContractRequest contractRequest = new ContractRequest()
         // EOS用 ChainCons.EOS，ETH用 ChainCons.ETH
         .setChain(ChainCons.EOS)
@@ -72,6 +68,7 @@ transferActionRequest.setAccount("eosio.token")
 contractRequest.addAction(transferActionRequest);
 
 MYKEYSdk.getInstance().contract(contractRequest, new MYKEYWalletCallback() {
+
     @Override
     public void onSuccess (String dataJson) {
         // dataJson：{"txId":""}
