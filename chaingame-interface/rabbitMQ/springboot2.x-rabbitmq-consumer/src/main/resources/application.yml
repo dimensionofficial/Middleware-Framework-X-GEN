@@ -1,0 +1,17 @@
+### 服务端口号
+server:
+  port: 8081
+
+### mq 连接配置
+spring:
+  rabbitmq:
+  ### 连接地址
+    host: 127.0.0.1
+    ### 端口号
+    port: 5672
+    #### 用户名 可以自己创建
+    username: ming
+    ### 密码
+    password: ming
+    ### 创建的地址
+    virtual-host: /order
