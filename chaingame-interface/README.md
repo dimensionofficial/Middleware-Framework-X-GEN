@@ -3,9 +3,11 @@ RabbitMq
 introduce
 
   Rabbitmq is a message broker: it accepts and forwards messages. You can think of it as a post office: when you want to post a letter, you put it in the delivery box and make sure that the postman will eventually deliver it to the recipient. In this case, rabbitmq is equivalent to a delivery box, post office, and postman.
+  
 
   The core idea of AMQP protocol is that producers and consumers are isolated, and producers never send messages directly to queues. Producers often don't know if a message will be sent to the queue, just to a switch. It is received by exchange, and then exchange forwards to queue for storage according to specific policies. Similarly, the same is true for consumers. Exchange is similar to a switch, forwarding messages to corresponding queues.
-  
+
+
   
 Six working modes
 
