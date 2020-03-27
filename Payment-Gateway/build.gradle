@@ -23,11 +23,7 @@ android {
             dirs 'libs'
         }
     }
-    sourceSets {
-        main {
-            jniLibs.srcDirs = ['libs']
-        }
-    }
+  
     defaultConfig {
         ndk {
             abiFilters "armeabi-v7a"
